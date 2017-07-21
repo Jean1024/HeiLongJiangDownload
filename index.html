@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"   content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>flex</title>
+  <script>
+  /******设置根元素字体大小*******/
+  !function(win,doc){
+      var d=doc.documentElement;
+      function change(){
+          var fz = d.clientWidth/25
+          fz = fz>24?24:fz;
+          d.style.fontSize= fz+'px';
+      }
+      win.addEventListener('resize',change,false);
+      change();
+  }(window,document);
+</script>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    b{
+      font-weight: 400;
+    }
+    html,body{
+      height: 100%;
+      background:radial-gradient(#D4E2F6,#9EBFE5);  
+    }
+    .box{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .item{
+      background: pink;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .logo{
+      margin-top: 4.933333rem;
+      width: 3.666667rem;
+    }
+    .title{
+      color: #103D99;
+      font-size: 1.266667rem;
+      font-weight: 900;
+      font-family: '黑体';
+      letter-spacing: 0.166667rem;
+      margin-top: 1.0rem;
+    }
+    .info{
+      margin-top: 0.666667rem;
+      font-size: 0.933333rem;
+    }
+    .phone{
+      width: 11.933333rem;
+      margin-top: 2.333333rem;
+    }
+    .download{
+      margin-top: 2.333333rem;
+      width: 15.666667rem;
+    }
+    .download a{
+      
+    }
+    .download a span{
+       height: 2.333333rem; 
+       width: 7.333333rem;
+       background: #346baa;
+       border: 0.066667rem solid #fff;
+       border-radius: 1.2rem;
+      color: #fff;
+      line-height: 2.333333rem;
+      font-size: 0.8rem;
+    }
+    .download a .ios{
+      float: left;
+    }
+    .download a .andriod{
+      float: right;
+    }
+    .download a .ios img{
+      width: 0.8rem;
+      margin-left: 1.066667rem;
+      transform: translateY(0.1rem);
+      
+    }
+    .download a .ios b{
+      margin-left: 0.6rem;
+    }
+    .download a .andriod b{
+      margin-left: 0.133333rem;
+    }
+    .download a .andriod img{
+      width: 0.866667rem;
+      margin-left: 0.8rem;
+      transform: translateY(0.2rem);
+
+    }
+    .weixin{
+      width: 17rem;
+      font-size: 0.666667rem;
+      line-height: 1.066667rem;
+      margin-top: 2.166667rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img class="logo" src="imgs/hei-long-jiang/logo.png" alt="无法显示">
+    <p class="title">黑龙江气象</p>
+    <p class="info">天气形势 随时掌握</p>
+    <img class="phone" src="imgs/hei-long-jiang/phone.png" alt="无法显示">
+    <div class="download">
+      <a href="https://www.pgyer.com/TVBf">
+        <span class="ios"><img src="imgs/hei-long-jiang/ios.png" alt=""><b>IOS下载</b></span>
+      </a>
+      <a href="https://www.pgyer.com/FeJb">
+        <span class="andriod"><img src="imgs/hei-long-jiang/andriod.png" alt=""><b>Android下载</b></span>
+      </a>
+    </div>
+    <p class="weixin">*微信内打开，请点击右上角按钮，选择“在浏览器中打开”即可正常下载</p>
+  </div>
+</body>
+</html>
+
+<!-- Android版下载地址：https://www.pgyer.com/FeJb
+iOS版下载地址：https://www.pgyer.com/TVBf -->
